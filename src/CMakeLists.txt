@@ -1,8 +1,17 @@
-add_executable(qtTest main.cpp resources.qrc)
-target_link_libraries(
-qtTest Qt5::Quick Qt5::Qml Qt5::Gui Qt5::QuickControls2 Qt5::Widgets KF5::Kirigami2 KF5::I18n Qt5::Svg
-)
-if (ANDROID)
-    find_package(Qt${QT_MAJOR_VERSION} ${QT_MIN_VERSION} REQUIRED COMPONENTS Svg)
-    find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS Kirigami2)
-endif()
+# SPDX-FileCopyrightText: 2023 HEROBRINE7GAMER <tapermeerkat77@gmail.com>
+# SPDX-License-Identifier: GPL-3.0
+
+add_executable(qtQuickTest
+    main.cpp
+    resources.qrc)
+
+target_link_libraries(kontrast
+    Qt::Core
+    Qt::Gui
+    Qt::Qml
+    Qt::Quick
+    Qt::QuickControls2
+    Qt::Sql
+    Qt::Svg
+    KF5::I18n
+    KF5::CoreAddons)

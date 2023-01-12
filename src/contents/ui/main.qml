@@ -10,17 +10,16 @@ Kirigami.ApplicationWindow {
     id: root
 
     // Window title
-    // i18nc is useful for adding context for translators, also lets strings be changed for different languages
-    title: i18nc("@title:window", "Test")
+    title: ("@title:window", "Test")
 
     // Initial page to be loaded on app load
     pageStack.initialPage: Kirigami.ScrollablePage {
-        title: i18nc("@title:" , "qtTest")
+        title: ("@title:" , "qtTest")
 
         Controls.Label {
             // Center label horizontally and vertically within parent element
             anchors.centerIn: parent
-            text: i18n("Hello Test !")
+            text: ("Hello Test !")
         }
     }
 }
