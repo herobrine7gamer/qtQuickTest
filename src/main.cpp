@@ -4,6 +4,11 @@
 #include <QUrl>
 #include <KLocalizedContext>
 #include <KLocalizedString>
+#ifdef Q_OS_ANDROID
+Q_DECL_EXPORT
+QQuickStyle::setStyle(QStringLiteral("org.kde.breeze"));
+#endif
+
 
 int main(int argc, char *argv[])
 {
